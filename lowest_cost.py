@@ -1,18 +1,23 @@
 import json
 
-with open('team.json') as f:
-  team = json.load(f)
+class lowest_cost(team, tasks):
 
-for line in team:
-    print(line['Skills'])
+    def __init__(self, team, tasks):
+        self.team = self.read_json(team)
+        self.tasks = self.read_json(tasks)
+        
+    #this method reads a json file and stores it in an variable, it will return a json string
+    def read_json(self,json_file):
+        with open('team.json') as f:
+            json_string = json.load(f)
+        f.close()
+        return json_string
+          
     
-f.close()
 
-with open('tasks.json') as f:
-  tasks = json.load(f)
-
-
-for line in tasks:
-    print(line['Skills'])
     
-f.close()
+        
+    
+
+
+    
