@@ -1,6 +1,6 @@
 import json
 
-class lowest_cost(team, tasks):
+class lowest_cost:
 
     def __init__(self, team, tasks):
         self.team = self.read_json(team)
