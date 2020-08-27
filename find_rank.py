@@ -14,12 +14,15 @@ class find_rank:
         return json_string
 
     #this function will find members in the team that are qualified for the task
+    #Worst time complexity is O(n*m*p*q) where n is number of json objects in tasks.json, m is number of json objects in team.json, p is number of key value pairs in the dictionary skill of a task and q
+    #is number of key value pairs in the dictionary skill of team member
     def find_qualified(self,task):
         team= self.__team
         qualified=[]
         for member in team:
             for skill in task:
                 qualify=False
+                #check in every skill of a team member to see whether they match a skill requirement
                 for mem_skill in member['Skills']:
                     if mem_skill==skill:
                         skill_level=member['Skills'][skill]
@@ -51,6 +54,7 @@ class find_rank:
                 #find the balance so we can compare and see which member has the lowest skill level
                 total_score+=(skill_level-skill_req)
             member["Total score"]=total_score
+        #sort based on total difference
         qualified.sort(key=lambda e: e['Total score'])
         return qualified
                 
