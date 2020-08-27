@@ -35,7 +35,11 @@ class lowest_cost:
                     break
             #only add member to qualified list if member meets all requirements
             if qualify==True:
-                self.qualified.append(member)
+                member_dict={'Name':member['Name'],
+                             'Skills':{}}
+                for skill in task:
+                    member_dict['Skills'][skill]=member['Skills'][skill]
+                self.qualified.append(member_dict)
         return self.qualified
                     
             
