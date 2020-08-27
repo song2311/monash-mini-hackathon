@@ -1,0 +1,9 @@
+[{"Name": "Login_Module", "Skills": {"MongoDB": 3, "C++": 2}}, 
+{"Name": "Transaction_History", "Skills": {"SQL": 3}}, 
+{"Name": "Workflow_Manager", "Skills": {"Kafka": 3, "Flutter": 4, "SQL": 1, "Hazelcast": 3, "TypeScript": 2, "Apache Flink": 4, "C": 5, "BashScripting": 2, "Apache Storm": 1, "Java": 4}}, {"Name": "BlockChain_Hyperledger", "Skills": {"Python": 2, "Flutter": 2, "Apache Flink": 1, "Go": 3, "Apache Tomcat": 5, "SQL": 5, "C#": 5, "BashScripting": 1, "C++": 3}}, 
+{"Name": "Security_Module", "Skills": {"Redis": 2, "Vue": 1, "SQL": 5, "Kafka": 3, "TypeScript": 1, "C#": 4, "Hazelcast": 1, "Python": 3}}, 
+{"Name": "Webapp_Design", "Skills": {"SQL": 1, "Vue": 4}}, 
+{"Name": "Workflow_Designer", "Skills": {"C": 5, "TypeScript": 1, "Vue": 4, "Apache Storm": 1, "Flutter": 2, "Python": 5, "SQL": 5, "Java": 2, "Apache Flink": 2, "Kafka": 5}},
+{"Name": "Stock_Chart_Analyzer", "Skills": {"Flutter": 5, "C#": 3, "Go": 2, "Redis": 1, "NodeJS": 5, "SQL": 3, "Vue": 2, "Java": 2, "Hazelcast": 2}}, 
+{"Name": "Market_Prediction_Module", "Skills": {"Apache Storm": 1, "Redis": 2, "SQL": 3, "TypeScript": 2, "Apache Flink": 3, "Apache Tomcat": 2}}, 
+{"Name": "Voice_Call_Module", "Skills": {"C++": 1, "Apache Storm": 5, "Apache Flink": 1, "Apache Tomcat": 1, "Redis": 4, "Go": 4}}]
