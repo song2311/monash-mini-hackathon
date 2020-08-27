@@ -1,4 +1,5 @@
 from lowest_cost import lowest_cost
 
-cost=lowest_cost('team.json','tasks.json')
-cost.print_json(cost.team)
+if __name__ == "__main__":
+    cost=lowest_cost('team.json','tasks.json')
+    cost.find_qualified()
