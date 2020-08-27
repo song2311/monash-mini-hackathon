@@ -14,36 +14,41 @@ class find_rank:
         return json_string
 
     #this function will find members in the team that are qualified for the task
-    #Worst time complexity is O(n*m*p*q) where n is number of json objects in tasks.json, m is number of json objects in team.json, p is number of key value pairs in the dictionary skill of a task and q
-    #is number of key value pairs in the dictionary skill of team member
+    #Worst time complexity is O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     def find_qualified(self,task):
         team= self.__team
-        qualified=[]
+        qualified_members=[]
+
         for member in team:
+            qualify=False
             for skill in task:
-                qualify=False
-                #check in every skill of a team member to see whether they match a skill requirement
-                for mem_skill in member['Skills']:
-                    if mem_skill==skill:
+                print(skill)
+                try:
+                    #check if a member has the required skill
+                    if member['Skills'][skill]:
                         skill_level=member['Skills'][skill]
                         skill_req=task[skill]
                         #if member meets skill requirements set qualify to true and break loop
                         if skill_level>=skill_req:
                             qualify=True
+                        #quit if member does not meet skill requirements
+                        else:
+                            qualify=False
                             break
-                #exit loop early if member did not meet one of the skill requirements
-                if qualify==False:
+                except KeyError:
+                    #if skill cannot be found the member is also not qualified for the task
+                    qualify=False
                     break
-            #only add member to qualified list if member meets all requirements
-            if qualify==True:
-                member_dict={'Name':member['Name'],
-                             'Skills':{}}
+            if qualify:
+                member_dict={'Name':member['Name'],'Skills':{}}
+                #only insert the required skill in the returned list
                 for skill in task:
                     member_dict['Skills'][skill]=member['Skills'][skill]
-                qualified.append(member_dict)
-        return qualified
+                qualified_members.append(member_dict)
+        return qualified_members
 
     #this function takes in an array that contains those that are qualified for a task and sorts the rank of each member according to the lowest cost
+    #Worst time complexity is O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     def min_cost(self,task,qualified):
         for member in qualified:
             #count the total differnce of all skill level and skill level requirements, lower means higher rank
