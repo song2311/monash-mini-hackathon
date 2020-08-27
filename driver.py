@@ -1,10 +1,15 @@
-from lowest_cost import lowest_cost
+from find_rank import find_rank
 
 if __name__ == "__main__":
-    cost=lowest_cost('team.json','tasks.json')
-    for task in cost.tasks():
+    find_rank_class=find_rank('team.json','tasks.json')
+    for task in find_rank_class.tasks():
         print("Tasks:",task)
-        qualified=cost.find_qualified(task['Skills'])
+        qualified=find_rank_class.find_qualified(task['Skills'])
+        qualified=find_rank_class.min_cost(task,qualified)
+        count=0
+        
         for member in qualified:
-            print(member)
+            print("Rank:",count,member)
+            count+=1
+            
         print("\n")

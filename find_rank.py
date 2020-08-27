@@ -1,6 +1,6 @@
 import json
 
-class lowest_cost:
+class find_rank:
 
     def __init__(self, team, tasks):
         self.__team = self.read_json(team)
@@ -40,20 +40,20 @@ class lowest_cost:
                 qualified.append(member_dict)
         return qualified
 
+    #this function takes in an array that contains those that are qualified for a task and sorts the rank of each member according to the lowest cost
+    def min_cost(self,task,qualified):
+        for member in qualified:
+            #count the total differnce of all skill level and skill level requirements, lower means higher rank
+            total_score=0
+            for skill in task['Skills']:
+                skill_level=member['Skills'].get(skill)
+                skill_req=task['Skills'].get(skill)
+                #find the balance so we can compare and see which member has the lowest skill level
+                total_score+=(skill_level-skill_req)
+            member["Total score"]=total_score
+        qualified.sort(key=lambda e: e['Total score'])
+        return qualified
+                
     def tasks(self):
         return self.__tasks
                     
-            
-    
-        
-    
-
-
-    
-#for skill in task:
-    #prints the rank of skill
-        #print(task[skill])
-#for member in team:
-    #print(member['Name'])
-    #for skill in member['Skills']:
-         #print(skill,":",member['Skills'][skill])
