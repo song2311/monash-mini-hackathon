@@ -7,4 +7,5 @@
 {"Name": "Natasha", "Skills": {"C": 3, "Apache Flink": 5, "MongoDB": 4, "TypeScript": 4, "BashScripting": 2, "C#": 3, "Vue": 1, "C++": 3, "Python": 2, "Flutter": 2, "Apache Storm": 2}},
 {"Name": "Abed", "Skills": {"Apache Tomcat": 4, "TypeScript": 5, "Hazelcast": 1, "Kafka": 1, "Flutter": 5, "Vue": 5, "C++": 4}}, 
 {"Name": "Lee", "Skills": {"Vue": 1, "NodeJS": 2, "Apache Storm": 3}}, 
-{"Name": "Britta", "Skills": {"Redis": 1, "TypeScript": 5, "Flutter": 1, "Java": 5, "Hazelcast": 5, "Vue": 5, "Python": 5, "NodeJS": 5, "Apache Tomcat": 2, "Apache Storm": 4, "C#": 4, "MongoDB": 1, "C++": 3, "BashScripting": 2, "C": 2, "Apache Flink": 5, "Kafka": 2}}]
+{"Name": "Britta", "Skills": {"Redis": 1, "TypeScript": 5, "Flutter": 1, "Java": 5, "Hazelcast": 5, "Vue": 5, "Python": 5, "NodeJS": 5, "Apache Tomcat": 2, "Apache Storm": 4, "C#": 4, "MongoDB": 1, "C++": 3, "BashScripting": 2, "C": 2, "Apache Flink": 5, "Kafka": 2}},
+{"Name": "Shun", "Skills": {"Kafka": 3, "Flutter": 4, "SQL": 1, "Hazelcast": 3, "TypeScript": 2, "Apache Flink": 4, "C": 5, "BashScripting": 2, "Apache Storm": 1, "Java": 4}}]

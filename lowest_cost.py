@@ -5,7 +5,6 @@ class lowest_cost:
     def __init__(self, team, tasks):
         self.__team = self.read_json(team)
         self.__tasks = self.read_json(tasks)
-        self.qualified=[];
         
     #this method reads a json file and stores it in an variable, it will return a json string
     def read_json(self,json_file):
@@ -15,10 +14,9 @@ class lowest_cost:
         return json_string
 
     #this function will find members in the team that are qualified for the task
-    def find_qualified(self):
-        task=self.__tasks[0]['Skills']
+    def find_qualified(self,task):
         team= self.__team
-        print("Tasks:",task)
+        qualified=[]
         for member in team:
             for skill in task:
                 qualify=False
@@ -39,8 +37,11 @@ class lowest_cost:
                              'Skills':{}}
                 for skill in task:
                     member_dict['Skills'][skill]=member['Skills'][skill]
-                self.qualified.append(member_dict)
-        return self.qualified
+                qualified.append(member_dict)
+        return qualified
+
+    def tasks(self):
+        return self.__tasks
                     
             
     
