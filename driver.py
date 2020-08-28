@@ -4,11 +4,10 @@ if __name__ == "__main__":
     find_rank_class=find_rank('team.json','tasks.json')
     for task in find_rank_class.tasks():
         print("Tasks:",task)
-        qualified=find_rank_class.find_qualified(task['Skills'])
-        qualified=find_rank_class.min_cost(task,qualified)
+        filter_skill=find_rank_class.find_qualified(task['Skills'])
+        filter_skill=find_rank_class.rank_by_skill(task,filter_skill)
         count=0
-        
-        for member in qualified:
+        for member in filter_skill:
             print("Rank:",count,member)
             count+=1
             
