@@ -18,7 +18,7 @@ class find_rank:
 
     #this function will filter skills unrelated to the tasks, a member without any skill required by a task why have an empty skill dictionary
     #Worst time complexity is O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
-    def find_qualified(self,task):
+    def filter_skill(self,task):
         team= self.__team
         #list of dictionaries that only contains team members with the skill required by the task
         filtered_skill=[]
@@ -46,13 +46,13 @@ class find_rank:
                 try:
                     skill_req=task['Skills'][skill]
                     skill_level=member['Skills'][skill]
-                    #find the balance so we can compare and see which member has the lowest skill level
+                    #find the balance to see how overqualified a member is in relation to the skill requirements
                     total_score+=(skill_level-skill_req)
                 except KeyError:
-                    #minus if skill is not found in member
+                    #minus the skill requirements if the member does not have the skills
                     total_score-=skill_req
             member["Total score"]=total_score
-        #sort based on total difference
+        #sort by highest score
         filtered_skill.sort(key=lambda e: e['Total score'],reverse=True)
         return filtered_skill
 
