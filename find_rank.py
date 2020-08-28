@@ -20,10 +20,11 @@ class find_rank:
     #Worst time complexity is O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     def filter_skill(self,task):
         team= self.__team
-        #list of dictionaries that only contains team members with the skill required by the task
+        #list of dictionaries that only contains team members and their skill related to the task
         filtered_skill=[]
 
         for member in team:
+            #the Skills dictionary will be empty if the member has 0 skill for the task
             member_dict={'Name':member['Name'],'Skills':{}}
             for skill in task:
                 try:
