@@ -7,9 +7,10 @@ if __name__ == "__main__":
         filtered_skill=find_rank_class.filter_skill(task['Skills'])
         print("Tasks:",task)
         print("\nRank by skill")
-        filtered_skill=find_rank_class.rank_by_skill(task,filter_skill)
+        find_rank_class.rank_by_skill(task)
+        filtered_skill=find_rank_class.filtered_skill()
         count=0
-        for member in filter_skill:
+        for member in filtered_skill:
             print("Rank",count,":",member)
             count+=1
         
