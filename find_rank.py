@@ -62,6 +62,7 @@ class find_rank():
                     #check if a member has the required skill
                     if member['Skills'][skill]:
                         member_dict['Skills'][skill]=member['Skills'][skill]
+                    #member does not qualify if he/she has lower skill than the task requires
                     if member['Skills'][skill]<task[skill]:
                         qualify=False
                 except KeyError:
@@ -80,28 +81,38 @@ class find_rank():
     def rank_by_skill(self,task):
         if self.is_empty():
             return
-        self.__call_count += 1
+    
+        for member in self.__meet_req:
+            #count the total differnce of all skill level and skill level requirements, lower means higher rank
+            total_score=0
+            for skill in task['Skills']:
+                skill_req=task['Skills'][skill]
+                skill_level=member['Skills'][skill]
+                #find the balance to see how overqualified a member is in relation to the skill requirements
+                total_score+=(skill_level-skill_req)
+                member["Over skill level"]=total_score
         
-        for member in self.__filtered_skill:
-            #count the total differnce of all skill level and skill level requirements, higher means higher rank
+        for member in self.__fail_req:
+            #count the total differnce of all skill level and skill level requirements, lower means higher rank
             total_score=0
             for skill in task['Skills']:
                 try:
                     skill_req=task['Skills'][skill]
                     skill_level=member['Skills'][skill]
-                    #find the balance to see how overqualified a member is in relation to the skill requirements
-                    if skill_level>=skill_req:
-                        total_score+=(skill_level-skill_req)
-                    else:
-                        total_score-=(skill_req-skill_level)
+                    #find the balance to see how overqualified/underqualified a member is in relation to the skill requirements
+                    total_score+=(skill_level-skill_req)
                 except KeyError:
                     #minus the skill requirements if the member does not have the skills
                     total_score-=skill_req
             member["Total score"]=total_score
-        #sort by highest score
-        self.__filtered_skill.sort(key=lambda e: e['Total score'],reverse=True)
+        try:   
+            self.__meet_req.sort(key=lambda e: e["Over skill level"],reverse=True)
+            self.__fail_req.sort(key=lambda e: e['Total score'],reverse=True)
+        except KeyError:
+            pass
+        
         self.__call_count += 1
-        return
+        return self.__meet_req+self.__fail_req
 
     @decorator(total_times)
     def rank_by_cost(self, task):
@@ -159,8 +170,13 @@ class find_rank():
         for task in self.tasks():
             filtered_skill=self.filter_skill(task['Skills'])
             print("Tasks:",task)
-            print("\nRank by skill")
-           
+            print("\nRank by skill\n")
+            ranked_list=self.rank_by_skill(task)
+            count=0
+            for member in ranked_list:
+                print("Rank",count,":",member)
+                count+=1
+                
             print("\nRank by cost\n")
             ranked_list=self.rank_by_cost(task)
             count=0
