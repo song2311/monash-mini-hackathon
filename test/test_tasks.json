@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Workflow_Manager",
+    "Skills": {
+      "Kafka": 3,
+      "Flutter": 4,
+      "SQL": 1,
+      "Hazelcast": 3,
+      "TypeScript": 2,
+      "Apache Flink": 4,
+      "C": 5,
+      "BashScripting": 2,
+      "Apache Storm": 1,
+      "Java": 4
+    }
+  }
+]
