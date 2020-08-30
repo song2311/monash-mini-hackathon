@@ -9,26 +9,26 @@ Elapsed time of rank_by_skill in milliseconds : 0.000000
 Elapsed time of rank_by_cost in milliseconds : 0.000000
 Elapsed time of filter_skill in milliseconds : 0.000000
 Elapsed time of rank_by_skill in milliseconds : 0.000000
-Elapsed time of rank_by_cost in milliseconds : 0.000000
-Elapsed time of filter_skill in milliseconds : 0.000000
-Elapsed time of rank_by_skill in milliseconds : 0.000000
-Elapsed time of rank_by_cost in milliseconds : 0.000000
-Elapsed time of filter_skill in milliseconds : 0.000000
-Elapsed time of rank_by_skill in milliseconds : 0.000000
-Elapsed time of rank_by_cost in milliseconds : 0.997543
-Elapsed time of filter_skill in milliseconds : 0.000000
-Elapsed time of rank_by_skill in milliseconds : 0.997305
-Elapsed time of rank_by_cost in milliseconds : 0.000000
-Elapsed time of filter_skill in milliseconds : 0.000000
-Elapsed time of rank_by_skill in milliseconds : 0.000000
-Elapsed time of rank_by_cost in milliseconds : 0.997543
+Elapsed time of rank_by_cost in milliseconds : 0.996590
 Elapsed time of filter_skill in milliseconds : 0.000000
 Elapsed time of rank_by_skill in milliseconds : 0.000000
 Elapsed time of rank_by_cost in milliseconds : 0.000000
 Elapsed time of filter_skill in milliseconds : 0.000000
 Elapsed time of rank_by_skill in milliseconds : 0.000000
 Elapsed time of rank_by_cost in milliseconds : 0.000000
-Elapsed time of filter_skill in milliseconds : 0.996828
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
 Elapsed time of rank_by_skill in milliseconds : 0.000000
 Elapsed time of rank_by_cost in milliseconds : 0.000000
 Elapsed time of filter_skill in milliseconds : 0.000000
@@ -36,7 +36,7 @@ Elapsed time of rank_by_skill in milliseconds : 0.000000
 Elapsed time of rank_by_cost in milliseconds : 0.000000
 -------Final Performance Log-------
 Total function calls made : 36
-Total elapsed time in milliseconds : 2031.428337
-Mean call elapsed time in milliseconds : 0.110812
-Maximum call elapsed time in milliseconds : 0.997543
+Total elapsed time in milliseconds : 2571.074963
+Mean call elapsed time in milliseconds : 0.027683
+Maximum call elapsed time in milliseconds : 0.996590
 Minimum call elapsed time in milliseconds : 0.000000
