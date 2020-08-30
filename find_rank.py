@@ -84,7 +84,7 @@ class find_rank():
     Arguments:          json_file, the file to parse into a dictionary
     Time complexity:    Best case = O(N) time complexity
                         Worst case = O(N) time complexity
-    Return: the list of tasks
+    Return: the json dictionary parsed from the json file
     """
     @decorator(total_times)
     def read_json(self,json_file):
