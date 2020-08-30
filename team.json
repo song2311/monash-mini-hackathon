@@ -50,6 +50,14 @@
     }
   },
   {
+    "Name": "Shun",
+    "Skills": {"MongoDB": 3, "C++":2 }
+  },
+  {
+    "Name": "Adrian",
+    "Skills": {"MongoDB": 3, "C++":1 }
+  },
+  {
     "Name": "Brandon",
     "Skills": { "Redis": 4, "MongoDB": 1, "TypeScript": 5, "Go": 1, "SQL": 3 }
   },

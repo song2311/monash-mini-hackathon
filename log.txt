@@ -1,7 +1,33 @@
-Elapsed time of read_json in milliseconds : 1.560926
-Elapsed time of read_json in milliseconds : 1.350164
-Elapsed time of tasks in milliseconds : 0.005960
-Elapsed time of filter_skill in milliseconds : 0.096083
-Elapsed time of rank_by_skill in milliseconds : 0.108004
-Elapsed time of filtered_skill in milliseconds : 0.003815
-Elapsed time of filtered_skill in milliseconds : 0.001907
+Elapsed time of read_json in milliseconds : 0.000000
+Elapsed time of read_json in milliseconds : 0.998497
+Elapsed time of tasks in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.997782
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.998259
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.998020
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.998259
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+Elapsed time of filter_skill in milliseconds : 0.000000
+Elapsed time of rank_by_cost in milliseconds : 0.000000
+-------Final Performance Log-------
+Total function calls made : 27
+Total elapsed time in milliseconds : 1239.282131
+Mean call elapsed time in milliseconds : 0.184845
+Maximum call elapsed time in milliseconds : 0.998497
+Minimum call elapsed time in milliseconds : 0.000000
