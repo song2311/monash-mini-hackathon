@@ -37,7 +37,7 @@ class find_rank():
         f.close()
         return json_string
 
-    #this function will filter skills unrelated to the tasks, a member without any skill required by a task why have an empty skill dictionary
+    #this function will filter skills unrelated to the tasks, a member without any skill required by a task will have an empty skill dictionary
     #Worst time complexity is O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     @decorator(total_times)
     def filter_skill(self,task):
@@ -59,7 +59,7 @@ class find_rank():
                     continue
             self.__filtered_skill.append(member_dict)
 
-    #this function takes in an array that contains the members and the filtered skill and sorts the rank of each member according to the rank of skill
+    #this function takes in an array that contains the members and the filtered skill and sorts the rank of each member by the skill level 
     #Worst time complexity is O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     @decorator(total_times)
     def rank_by_skill(self,task):
