@@ -39,10 +39,26 @@ class find_rank():
     def is_empty(self):
         return len(self.__team[0]) == 0 or len(self.__tasks[0]) == 0
 
+    """
+    Function that returns the ranks of the member by cost
+    Returns an empty list if run() is not called yet 
+    Arguments:          None
+    Time complexity:    Best case = O(1) time complexity
+                        Worst case = O(1) time complexity
+    Return: List of members ranked by their cost
+    """
     @decorator(total_times, matching_times, False) 
     def get_rank_cost(self):
         return self.__rank_cost
 
+    """
+    Function that returns the ranks of the member by their skills
+    Returns an empty list if run() is not called yet 
+    Arguments:          None
+    Time complexity:    Best case = O(1) time complexity
+                        Worst case = O(1) time complexity
+    Return: List of members ranked by their skills
+    """
     @decorator(total_times, matching_times, False) 
     def get_rank_skill(self):
         return self.__rank_skill
