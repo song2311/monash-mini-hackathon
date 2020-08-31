@@ -1,6 +1,80 @@
-Elapsed time of read_json in milliseconds : 0.139952
-Elapsed time of read_json in milliseconds : 0.156879
-Elapsed time of tasks in milliseconds : 0.006199
-Elapsed time of filter_skill in milliseconds : 0.017166
-Elapsed time of rank_by_skill in milliseconds : 0.015259
-Elapsed time of rank_by_cost in milliseconds : 0.020266
+Elapsed time of read_json in milliseconds : 0.302076
+Elapsed time of read_json in milliseconds : 0.408888
+Elapsed time of is_empty in milliseconds : 0.005245
+Elapsed time of tasks in milliseconds : 0.289917
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of filter_skill in milliseconds : 0.253916
+Elapsed time of is_empty in milliseconds : 0.004053
+Elapsed time of rank_by_skill in milliseconds : 0.283718
+Elapsed time of is_empty in milliseconds : 0.002146
+Elapsed time of rank_by_cost in milliseconds : 0.322104
+Elapsed time of is_empty in milliseconds : 0.003815
+Elapsed time of filter_skill in milliseconds : 0.315189
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of rank_by_skill in milliseconds : 0.277996
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of rank_by_cost in milliseconds : 0.231981
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of filter_skill in milliseconds : 0.349045
+Elapsed time of is_empty in milliseconds : 0.004053
+Elapsed time of rank_by_skill in milliseconds : 0.323772
+Elapsed time of is_empty in milliseconds : 0.005245
+Elapsed time of rank_by_cost in milliseconds : 0.393152
+Elapsed time of is_empty in milliseconds : 0.003815
+Elapsed time of filter_skill in milliseconds : 0.325918
+Elapsed time of is_empty in milliseconds : 0.004053
+Elapsed time of rank_by_skill in milliseconds : 0.310183
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of rank_by_cost in milliseconds : 0.251055
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of filter_skill in milliseconds : 0.264883
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of rank_by_skill in milliseconds : 0.248909
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of rank_by_cost in milliseconds : 0.230789
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of filter_skill in milliseconds : 0.251055
+Elapsed time of is_empty in milliseconds : 0.002146
+Elapsed time of rank_by_skill in milliseconds : 0.231266
+Elapsed time of is_empty in milliseconds : 0.004053
+Elapsed time of rank_by_cost in milliseconds : 0.296831
+Elapsed time of is_empty in milliseconds : 0.002623
+Elapsed time of filter_skill in milliseconds : 0.305891
+Elapsed time of is_empty in milliseconds : 0.004053
+Elapsed time of rank_by_skill in milliseconds : 0.292301
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of rank_by_cost in milliseconds : 0.257969
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of filter_skill in milliseconds : 0.325918
+Elapsed time of is_empty in milliseconds : 0.003815
+Elapsed time of rank_by_skill in milliseconds : 0.311136
+Elapsed time of is_empty in milliseconds : 0.002861
+Elapsed time of rank_by_cost in milliseconds : 0.275135
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of filter_skill in milliseconds : 0.281096
+Elapsed time of is_empty in milliseconds : 0.003099
+Elapsed time of rank_by_skill in milliseconds : 0.247717
+Elapsed time of is_empty in milliseconds : 0.002146
+Elapsed time of rank_by_cost in milliseconds : 0.210285
+Elapsed time of is_empty in milliseconds : 0.002146
+Elapsed time of filter_skill in milliseconds : 0.224113
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of rank_by_skill in milliseconds : 0.190020
+Elapsed time of is_empty in milliseconds : 0.000954
+Elapsed time of rank_by_cost in milliseconds : 0.183821
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of filter_skill in milliseconds : 0.178099
+Elapsed time of is_empty in milliseconds : 0.002146
+Elapsed time of rank_by_skill in milliseconds : 0.200987
+Elapsed time of is_empty in milliseconds : 0.001907
+Elapsed time of rank_by_cost in milliseconds : 0.159979
+-------Matching Performance-------
+Mean matching call elapsed time in milliseconds : 0.260505
+Maximum matching call elapsed time in milliseconds : 0.393152
+Minimum matching call elapsed time in milliseconds : 0.159979
+-------Overall Performance-------
+Total function calls made : 36
+Total elapsed time in milliseconds : 30.192137
+Mean call elapsed time in milliseconds : 0.141522
+Maximum call elapsed time in milliseconds : 0.408888
+Minimum call elapsed time in milliseconds : 0.000954

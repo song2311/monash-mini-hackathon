@@ -8,7 +8,7 @@ import time
                         Worst case = O(1) time complexity 
     Return: the function decorator time_calls
 """
-def decorator(all_times):
+def decorator(all_times, matching_times, is_matching):
     def time_calls(func):
         def helper(*args, **kwargs):
             file = open("log.txt", 'a+')
@@ -16,6 +16,8 @@ def decorator(all_times):
             method = func(*args, **kwargs)
             end = time.time()
             all_times.append((end-start)*1000)
+            if is_matching:
+                matching_times.append((end-start)*1000)
             file.write("Elapsed time of %s in milliseconds : %f\n" %(func.__name__, (end-start) * 1000))
             file.close()
             return method

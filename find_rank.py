@@ -7,6 +7,7 @@ import time
 
 class find_rank():
     total_times = []
+    matching_times = []
     """
     Class constructor for find_rank
     Initializes the total_times to empty list
@@ -17,6 +18,7 @@ class find_rank():
     """
     def __init__(self, team, tasks):
         total_times = []
+        matching_times = []
         self.__call_count = 0
         self.__team = team
         self.__tasks = tasks
@@ -33,12 +35,15 @@ class find_rank():
                         Worst case = O(1) time complexity
     Return: true or false if the team or tasks list is empty
     """
+    @decorator(total_times, matching_times, False) 
     def is_empty(self):
         return len(self.__team[0]) == 0 or len(self.__tasks[0]) == 0
 
+    @decorator(total_times, matching_times, False) 
     def get_rank_cost(self):
         return self.__rank_cost
 
+    @decorator(total_times, matching_times, False) 
     def get_rank_skill(self):
         return self.__rank_skill
 
@@ -49,7 +54,7 @@ class find_rank():
                         Worst case = O(1) time complexity
     Return: the list of tasks
     """
-    @decorator(total_times) 
+    @decorator(total_times, matching_times, False) 
     def tasks(self):
         if self.is_empty():
             return []
@@ -64,7 +69,7 @@ class find_rank():
     Return: the json dictionary parsed from the json file
     """
     #this method reads a json file and stores it in an variable, it will return a json string
-    @decorator(total_times)
+    @decorator(total_times, matching_times, False)
     def read_json(self,json_file):
         self.__call_count += 1
         with open(json_file) as f:
@@ -82,7 +87,7 @@ class find_rank():
     """
     #this function will filter skills unrelated to the tasks, a member without any skill required by a task will have an empty skill dictionary
     #Worst time complexity is O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
-    @decorator(total_times)
+    @decorator(total_times, matching_times, False)
     def filter_skill(self,task):
         if self.is_empty():
             return
@@ -123,7 +128,7 @@ class find_rank():
                         Worst case =  O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     Return: the list of members ranked by cost
     """
-    @decorator(total_times)
+    @decorator(total_times, matching_times, True)
     def rank_by_cost(self, task):
         if self.is_empty():
             return
@@ -168,7 +173,7 @@ class find_rank():
                         Worst case = O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     Return: the list of members ranked by skill
     """
-    @decorator(total_times)
+    @decorator(total_times, matching_times, True)
     def rank_by_skill(self,task):
         if self.is_empty():
             return
@@ -270,7 +275,12 @@ class find_rank():
     """
     def log_performance(self):
         file = open("log.txt", "a+")
-        file.write("-------Final Performance Log-------\n")
+        file.write("-------Matching Performance-------\n")
+        file.write("Mean matching call elapsed time in milliseconds : %f\n" %(sum(find_rank.matching_times) / len(find_rank.matching_times)))
+        file.write("Maximum matching call elapsed time in milliseconds : %f\n" %max(find_rank.matching_times))
+        file.write("Minimum matching call elapsed time in milliseconds : %f" %min(find_rank.matching_times))
+        file.write("\n")
+        file.write("-------Overall Performance-------\n")
         file.write("Total function calls made : %d\n" %(self.__call_count))
         file.write("Total elapsed time in milliseconds : %f\n" %(self.__run_time))
         if len(find_rank.total_times) == 0:
