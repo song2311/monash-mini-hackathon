@@ -108,8 +108,8 @@ class find_rank():
                 
 
     """
-    Function that takes in a list that contains the task and it will calculate the rank of members in self.__meet_req_skill based on the difference of skill level of member and skill level requirements
-    of a task, self.__fail_req_skill uses a different formula for calculation where members without a skill will definitely have a lower ranking.
+    Function that takes in a list that contains the task and it will calculate the rank of members based on the difference of skill level requirements
+    of a task and skill level of member and add them up to simulate the additional cost of a member compared to the task at hand.
     Arguments:          task, the task to check with skills of members in the team
     Time complexity:    Best case =  O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
                         Worst case =  O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
@@ -121,7 +121,6 @@ class find_rank():
             return
     
         for member in self.__meet_req:
-            #count the total differnce of all skill level and skill level requirements, lower means higher rank
             total_score=0
             for skill in task['Skills']:
                 skill_req=task['Skills'][skill]
@@ -136,8 +135,8 @@ class find_rank():
                 try:
                     skill_req=task['Skills'][skill]
                     skill_level=member['Skills'][skill]
-                    #find the absolute value to see how overqualified/underqualified a member is in relation to the skill requirements
-                    total_score+=abs(skill_req-skill_level)
+                    #find the absolute value because it does not matter if a member exceeds or did not meet skill level requirements, it is still not cost effective, so the difference is found out
+                    #to determine the additional costs.                    total_score+=abs(skill_req-skill_level)
                 except KeyError:
                     #add the skill requirements because if member does not have the skill required it will the cost to train up the member will be equivalent to the skill level requirement of the task
                     total_score+=skill_req
@@ -152,9 +151,9 @@ class find_rank():
         return self.__meet_req+self.__fail_req
     
     """
-    Function that takes in a list that contains the task and it will calculate the rank of members in self.__meet_req_skill based on the difference of skill level of member and skill level requirements
-    of a task, higher score means higher rank
-    and sorts the rank of each member by the skill level 
+    Function that takes in a list that contains the task and it will calculate the rank of members based on the difference of skill level of member and skill level requirements
+    of a task and add them up to find out how overqualified or underqualified is a member, members that do not have skill for a task will be deducted with the skill level requirements
+    which results in a lower ranking. 
     Arguments:          task, the task to check with skills of members in the team
     Time complexity:    Best case =  O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
                         Worst case = O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
@@ -165,7 +164,6 @@ class find_rank():
         if self.is_empty():
             return
         for member in self.__meet_req:
-            #count the total differnce of all skill level and skill level requirements, lower means higher rank
             total_score=0
             for skill in task['Skills']:
                 skill_req=task['Skills'][skill]
