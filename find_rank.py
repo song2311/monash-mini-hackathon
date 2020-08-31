@@ -131,17 +131,16 @@ class find_rank():
                 member["Skill difference"]=total_score
         
         for member in self.__fail_req:
-            #count the total differnce of all skill level and skill level requirements, lower means higher rank
             total_score=0
             for skill in task['Skills']:
                 try:
                     skill_req=task['Skills'][skill]
                     skill_level=member['Skills'][skill]
-                    #find the balance to see how overqualified a member is in relation to the skill requirements
+                    #find the absolute value to see how overqualified/underqualified a member is in relation to the skill requirements
                     total_score+=abs(skill_req-skill_level)
                 except KeyError:
-                    #minus the skill requirements if the member does not have the skills
-                    total_score+=5
+                    #add the skill requirements if the member does not have the skills
+                    total_score+=skill_req
             member["Total score"]=total_score
         try:   
             self.__meet_req.sort(key=lambda e: e["Skill difference"])
