@@ -1,0 +1,47 @@
+[
+  {
+    "Name": "Annie",
+    "Skills": {
+      "SQL": 1,
+      "Kafka": 5,
+      "Hazelcast": 5,
+      "MongoDB": 3,
+      "Redis": 3,
+      "NodeJS": 4
+    }
+  },
+  {
+    "Name": "Chang",
+    "Skills": {
+      "Apache Tomcat": 5,
+      "Java": 3,
+      "SQL": 4,
+      "TypeScript": 4,
+      "Vue": 4,
+      "MongoDB": 2,
+      "Kafka": 5,
+      "Go": 1,
+      "C": 5,
+      "Redis": 1,
+      "BashScripting": 1,
+      "Python": 2
+    }
+  },
+  {
+    "Name": "Jack",
+    "Skills": {
+      "Apache Tomcat": 5,
+      "Java": 3,
+      "SQL": 4,
+      "MongoDB": 1,
+      "TypeScript": 4,
+      "Vue": 4,
+      "Kafka": 5,
+      "Go": 1,
+      "C": 1,
+      "Redis": 1,
+      "BashScripting": 1,
+      "Python": 2
+    }
+  }
+]

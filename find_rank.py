@@ -22,6 +22,8 @@ class find_rank():
         self.__tasks = tasks
         self.__meet_req=[]
         self.__fail_req=[]
+        self.__rank_skill=[]
+        self.__rank_cost=[]
         self.__run_time = 0
 
     """
@@ -33,6 +35,12 @@ class find_rank():
     """
     def is_empty(self):
         return len(self.__team[0]) == 0 or len(self.__tasks[0]) == 0
+
+    def get_rank_cost(self):
+        return self.__rank_cost
+
+    def get_rank_skill(self):
+        return self.__rank_skill
 
     """
     Function to return the list of tasks extracted from the task json file
@@ -148,6 +156,7 @@ class find_rank():
             pass
         
         self.__call_count += 1
+        self.__rank_cost = self.__meet_req+self.__fail_req
         return self.__meet_req+self.__fail_req
     
     """
@@ -192,6 +201,7 @@ class find_rank():
             pass
         
         self.__call_count += 1
+        self.__rank_skill = self.__meet_req+self.__fail_req
         return self.__meet_req+self.__fail_req
     
     
