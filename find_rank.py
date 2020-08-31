@@ -119,8 +119,8 @@ class find_rank():
     of a task, higher score means higher rank
     and sorts the rank of each member by the skill level 
     Arguments:          task, the task to check with skills of members in the team
-    Time complexity:    Best case = 
-                        Worst case = 
+    Time complexity:    Best case =  O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
+                        Worst case = O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     Return: the list of members ranked by skill
     """
     @decorator(total_times)
@@ -164,8 +164,8 @@ class find_rank():
     Function that takes in a list that contains the task and it will calculate the rank of members in self.__meet_req_skill based on the difference of skill level of member and skill level requirements
     of a task, self.__fail_req_skill uses a different formula for calculation where members without a skill will definitely have a lower ranking.
     Arguments:          task, the task to check with skills of members in the team
-    Time complexity:    Best case = 
-                        Worst case = 
+    Time complexity:    Best case =  O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
+                        Worst case =  O(n*m), where n is the number of json elements in team json and m is the number of elements in tasks json
     Return: the list of members ranked by cost
     """
     @decorator(total_times)
