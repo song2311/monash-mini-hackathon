@@ -139,7 +139,7 @@ class find_rank():
                     #find the absolute value to see how overqualified/underqualified a member is in relation to the skill requirements
                     total_score+=abs(skill_req-skill_level)
                 except KeyError:
-                    #add the skill requirements if the member does not have the skills
+                    #add the skill requirements because if member does not have the skill required it will the cost to train up the member will be equivalent to the skill level requirement of the task
                     total_score+=skill_req
             member["Total score"]=total_score
         try:   
@@ -184,11 +184,10 @@ class find_rank():
                     #find the balance to see how overqualified/underqualified a member is in relation to the skill requirements
                     total_score+=(skill_level-skill_req)
                 except KeyError:
-                    #minus the skill requirements if the member does not have the skills
                     total_score-=skill_req
             member["Total score"]=total_score
         try:
-            #reverse sort because a higher score means better skill
+            #reverse sort because a higher score means better skill level
             self.__meet_req.sort(key=lambda e: e["Skill difference"],reverse=True)
             self.__fail_req.sort(key=lambda e: e['Total score'],reverse=True)
         except KeyError:
